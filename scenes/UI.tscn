@@ -1,41 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://ui_scene"]
+[gd_scene format=3 uid="uid://cfet5sbv57peb"]
 
-[ext_resource type="Script" path="res://scripts/MobileControls.gd" id="1"]
+[ext_resource type="Script" uid="uid://cgech4ds042xy" path="res://scripts/MobileControls.gd" id="1"]
 
-[node name="UI" type="CanvasLayer"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dj8aq"]
+size = Vector2(120, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ro3t7"]
+size = Vector2(120, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5en4g"]
+size = Vector2(140, 140)
+
+[node name="UI" type="CanvasLayer" unique_id=1460182622]
 script = ExtResource("1")
 
-[node name="HUD" type="MarginContainer" parent="."]
+[node name="HUD" type="MarginContainer" parent="." unique_id=639381212]
 offset_right = 720.0
 offset_bottom = 220.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HUD"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD" unique_id=1150421848]
+layout_mode = 2
 
-[node name="ScoreLabel" type="Label" parent="HUD/VBoxContainer"]
+[node name="ScoreLabel" type="Label" parent="HUD/VBoxContainer" unique_id=1050150733]
+layout_mode = 2
 text = "Score: 0"
 
-[node name="LevelLabel" type="Label" parent="HUD/VBoxContainer"]
+[node name="LevelLabel" type="Label" parent="HUD/VBoxContainer" unique_id=631206471]
+layout_mode = 2
 text = "Level: 1"
 
-[node name="StarsLabel" type="Label" parent="HUD/VBoxContainer"]
+[node name="StarsLabel" type="Label" parent="HUD/VBoxContainer" unique_id=1301369343]
+layout_mode = 2
 text = "Stars: 0"
 
-[node name="VirtualControls" type="Control" parent="."]
-layout_mode = 1
+[node name="VirtualControls" type="Control" parent="." unique_id=609820518]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LeftButton" type="TouchScreenButton" parent="VirtualControls"]
+[node name="LeftButton" type="TouchScreenButton" parent="VirtualControls" unique_id=1226494135]
 position = Vector2(40, 1120)
-shape_visible = true
+shape = SubResource("RectangleShape2D_dj8aq")
+action = "move_left"
 
-[node name="RightButton" type="TouchScreenButton" parent="VirtualControls"]
+[node name="RightButton" type="TouchScreenButton" parent="VirtualControls" unique_id=1255776302]
 position = Vector2(170, 1120)
-shape_visible = true
+shape = SubResource("RectangleShape2D_ro3t7")
+action = "move_right"
 
-[node name="ShootButton" type="TouchScreenButton" parent="VirtualControls"]
+[node name="ShootButton" type="TouchScreenButton" parent="VirtualControls" unique_id=521307770]
 position = Vector2(600, 1120)
-shape_visible = true
+shape = SubResource("RectangleShape2D_5en4g")
+action = "shoot"

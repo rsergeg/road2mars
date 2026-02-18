@@ -6,9 +6,9 @@ extends Node2D
 @onready var player: CharacterBody2D = $Player
 @onready var spawn_timer: Timer = $SpawnTimer
 @onready var ui: CanvasLayer = $UI
-@onready var score_label: Label = $UI/HUD/ScoreLabel
-@onready var level_label: Label = $UI/HUD/LevelLabel
-@onready var stars_label: Label = $UI/HUD/StarsLabel
+@onready var score_label = $UI/HUD/VBoxContainer/ScoreLabel
+@onready var level_label = $UI/HUD/VBoxContainer/LevelLabel
+@onready var stars_label = $UI/HUD/VBoxContainer/StarsLabel
 
 var boss_spawned: bool = false
 
