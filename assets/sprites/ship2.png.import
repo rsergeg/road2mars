@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr46v3q67ovbx"
-path="res://.godot/imported/ship.png-56ce329a24be284c0bec16b15a37bb2b.ctex"
+uid="uid://ybkkmveseqay"
+path="res://.godot/imported/ship2.png-08b5886624a1f4398e9eca34307398cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ship.png"
-dest_files=["res://.godot/imported/ship.png-56ce329a24be284c0bec16b15a37bb2b.ctex"]
+source_file="res://assets/sprites/ship2.png"
+dest_files=["res://.godot/imported/ship2.png-08b5886624a1f4398e9eca34307398cf.ctex"]
 
 [params]
 
