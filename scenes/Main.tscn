@@ -16,6 +16,30 @@ script = ExtResource("1")
 asteroid_scene = ExtResource("3")
 boss_scene = ExtResource("4")
 
+
+[node name="PageBackground" type="ColorRect" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0509804, 0.0666667, 0.0901961, 1)
+
+[node name="PlayfieldBackground" type="ColorRect" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.00392157, 0.0156863, 0.0352941, 1)
 [node name="Player" parent="." unique_id=713521747 instance=ExtResource("2")]
 
 [node name="UI" parent="." unique_id=1334638701 instance=ExtResource("5")]
