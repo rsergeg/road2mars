@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" path="res://assets/sounds/hit.wav" id="7"]
 [ext_resource type="AudioStream" path="res://assets/sounds/levelup.wav" id="8"]
 [ext_resource type="AudioStream" path="res://assets/sounds/gameover.wav" id="9"]
+[ext_resource type="AudioStream" path="res://assets/sounds/levelup.wav" id="10"]
 
 [node name="Main" type="Node2D" unique_id=500742528]
 script = ExtResource("1")
@@ -20,7 +21,7 @@ boss_scene = ExtResource("4")
 [node name="UI" parent="." unique_id=1334638701 instance=ExtResource("5")]
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1733629005]
-autostart = true
+autostart = false
 
 [node name="ShootSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6")
@@ -33,3 +34,6 @@ stream = ExtResource("8")
 
 [node name="GameoverSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9")
+
+[node name="StartSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10")
