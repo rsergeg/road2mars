@@ -62,6 +62,8 @@ func take_hit() -> void:
 	health_changed.emit(_health, max_health)
 
 	if _health <= 0:
+		collision_layer = 0
+		collision_mask = 0
 		player_died.emit()
 		return
 

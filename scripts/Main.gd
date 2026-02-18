@@ -6,9 +6,9 @@ extends Node2D
 @onready var player: CharacterBody2D = $Player
 @onready var spawn_timer: Timer = $SpawnTimer
 @onready var ui: CanvasLayer = $UI
-@onready var score_label = $UI/HUD/VBoxContainer/ScoreLabel
-@onready var level_label = $UI/HUD/VBoxContainer/LevelLabel
-@onready var stars_label = $UI/HUD/VBoxContainer/StarsLabel
+@onready var score_label = $UI/HUD/VBoxContainer/StatsRow/ScoreLabel
+@onready var level_label = $UI/HUD/VBoxContainer/StatsRow/LevelLabel
+@onready var stars_label = $UI/HUD/VBoxContainer/StatsRow/StarsLabel
 @onready var life_label = $UI/HUD/VBoxContainer/LifeLabel
 @onready var shoot_sfx: AudioStreamPlayer = $ShootSfx
 @onready var hit_sfx: AudioStreamPlayer = $HitSfx
@@ -113,13 +113,13 @@ func _on_boss_defeated() -> void:
 	boss_spawned = false
 
 func _on_score_changed(value: int) -> void:
-	score_label.text = "Score: %d" % value
+	score_label.text = "SCORE: %d" % value
 
 func _on_stars_changed(value: int) -> void:
-	stars_label.text = "Stars: %d" % value
+	stars_label.text = "STARS: %d" % value
 
 func _on_level_changed(value: int) -> void:
-	level_label.text = "Level: %d" % value
+	level_label.text = "LEVEL: %d" % value
 	spawn_timer.wait_time = clamp(1.0 - float(value) * 0.02, 0.35, 1.0)
 	if value > _last_level:
 		levelup_sfx.play()
