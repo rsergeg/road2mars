@@ -1,3 +1,2 @@
-res://scripts/Main.gd
-res://scripts/MobileControls.gd
-res://scripts/Player.gd
+res://scenes/UI.tscn
+res://assets/theme/road2mars_theme.tres
