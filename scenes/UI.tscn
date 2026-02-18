@@ -33,6 +33,15 @@ text = "Level: 1"
 layout_mode = 2
 text = "Stars: 0"
 
+[node name="LifeLabel" type="Label" parent="HUD/VBoxContainer" unique_id=935100001]
+layout_mode = 2
+text = "LIFE: 5/5"
+
+[node name="GameOverLabel" type="Label" parent="HUD/VBoxContainer" unique_id=935100002]
+visible = false
+layout_mode = 2
+text = "GAME OVER"
+
 [node name="VirtualControls" type="Control" parent="." unique_id=609820518]
 layout_mode = 3
 anchors_preset = 15

@@ -5,6 +5,10 @@
 [ext_resource type="PackedScene" path="res://scenes/Asteroid.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/Boss.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/UI.tscn" id="5"]
+[ext_resource type="AudioStream" path="res://assets/sounds/shoot.wav" id="6"]
+[ext_resource type="AudioStream" path="res://assets/sounds/hit.wav" id="7"]
+[ext_resource type="AudioStream" path="res://assets/sounds/levelup.wav" id="8"]
+[ext_resource type="AudioStream" path="res://assets/sounds/gameover.wav" id="9"]
 
 [node name="Main" type="Node2D" unique_id=500742528]
 script = ExtResource("1")
@@ -17,3 +21,15 @@ boss_scene = ExtResource("4")
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1733629005]
 autostart = true
+
+[node name="ShootSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6")
+
+[node name="HitSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7")
+
+[node name="LevelupSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8")
+
+[node name="GameoverSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9")
