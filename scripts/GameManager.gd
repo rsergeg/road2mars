@@ -40,7 +40,7 @@ func _update_level_progression() -> void:
 
 	if stars >= STAR_THRESHOLDS[-1]:
 		var extra_stars := stars - STAR_THRESHOLDS[-1]
-		next_level = max(next_level, 6 + int(extra_stars / POST_THRESHOLD_STEP))
+		next_level = max(next_level, 6 + int(float(extra_stars) / POST_THRESHOLD_STEP))
 
 	next_level = min(next_level, MAX_LEVEL)
 	if next_level != level:

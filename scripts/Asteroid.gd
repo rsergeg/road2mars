@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 func take_damage(amount: int) -> void:
 	health -= amount
 	if health <= 0:
-		_destroy_and_drop()
+		call_deferred("_destroy_and_drop")
 
 func _destroy_and_drop() -> void:
 	GameManager.add_score(10 + int(size) * 10)

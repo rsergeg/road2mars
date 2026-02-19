@@ -1,2 +1,5 @@
-res://scenes/UI.tscn
 res://assets/theme/road2mars_theme.tres
+res://scenes/UI.tscn
+res://scenes/Main.tscn
+res://scripts/Asteroid.gd
+res://scripts/GameManager.gd
